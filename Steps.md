@@ -44,4 +44,5 @@ Provides mockMvc
 http://localhost:8080/api/v1/cars/price cannot be accessed by unauthenticated users   
 Checkout the CarControllerSecurityTest test 
 
-
+## 8 Integration test when whole container is running 
+CarControllerIT
