@@ -34,9 +34,11 @@ curl -X POST http://localhost:8080/api/v1/cars \
 ## 4. Show the dealer test - isolated domain logic test
 
 ## 5. How to test web layer, with no Servlet Container running 
-@WebMvcTest - example of a slice mockMvc
+@WebMvcTest - example of a slice for web layer testing 
+Provides mockMvc
 
-
+## 6. Testing DB layer 
+@DataJpaTest - example of a slice for DB testing, only Repositories are loaded 
 
 
 
