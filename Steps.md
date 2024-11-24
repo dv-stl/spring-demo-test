@@ -40,5 +40,8 @@ Provides mockMvc
 ## 6. Testing DB layer 
 @DataJpaTest - example of a slice for DB testing, only Repositories are loaded 
 
+## 7. What about security 
+http://localhost:8080/api/v1/cars/price cannot be accessed by unauthenticated users   
+Checkout the CarControllerSecurityTest test 
 
 

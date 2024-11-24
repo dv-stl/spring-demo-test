@@ -51,6 +51,11 @@ public class CarController {
         return ResponseEntity.created(location).build();
     }
 
+    @GetMapping("/price")
+    public String getPrice() {
+        return "42";
+    }
+
     private CarDTO toViewDTO(Car car) {
         var dto = new CarDTO();
         dto.uuid = car.uuid();

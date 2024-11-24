@@ -1,5 +1,6 @@
 package com.example.slightlycomplex.web;
 
+import com.example.slightlycomplex.app.SecurityConfig;
 import com.example.slightlycomplex.domain.CarDealer;
 import com.example.slightlycomplex.domain.model.Car;
 import org.junit.jupiter.api.DisplayName;
@@ -7,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -18,6 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(CarController.class)
+@Import(SecurityConfig.class) //this is unfortunate, default security cuts off all access, so special import for config has to be made
 class CarControllerTest {
 
     @MockBean
@@ -71,7 +74,4 @@ class CarControllerTest {
 
         System.out.println(res.getResponse().getContentAsString());
     }
-
-// TODO test with security
-
 }
